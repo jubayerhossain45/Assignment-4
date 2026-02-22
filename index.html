@@ -10,6 +10,13 @@
 
 <!-- icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <!-- style halka patla -->
+  <style>
+    .interviewBtn ,.rejectBtn  {
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body class="">
@@ -49,9 +56,9 @@
 
     <!-- Tabs --> 
     <div class="flex gap-4 mt-4">
-      <button id="allTab" class="px-4 py-2 bg-blue-600  text-white rounded">All</button>
-      <button id="interviewTab" class="px-4 py-2 bg-gray-300 rounded">Interview</button>
-      <button id="rejectedTab" class="px-4 py-2 bg-gray-300 rounded">Rejected</button>
+      <button id="allTab" class="px-4 py-2 bg-blue-600 active:bg-gray-300  text-white rounded">All</button>
+      <button id="interviewTab" class="px-4 py-2 bg-gray-300 active:bg-green-500 rounded">Interview</button>
+      <button id="rejectedTab" class="px-4 py-2 bg-gray-300 active:bg-red-500 rounded">Rejected</button>
     </div>
 
     <!-- No Job Message -->
