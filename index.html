@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JobTrack Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- daisyui and tailwind css -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="">
+
+  <!-- Navbar -->
+  <div class="bg-blue-600 text-black  p-4 text-2xl font-bold bg-gray-100 ">
+    JobTrack Dashboard
+  </div>
+
+  <!-- Dashboard Cards -->
+  <div class="max-w-6xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
+
+    <div class="bg-white p-5 rounded shadow text-center">
+      <h2 class="text-lg font-semibold">Total Jobs</h2>
+      <p id="totalCount" class="text-3xl font-bold mt-2">8</p>
+    </div>
+
+    <div class="bg-white p-5 rounded shadow text-center">
+      <h2 class="text-lg font-semibold">Interview</h2>
+      <p id="interviewCount" class="text-3xl font-bold mt-2">0</p>
+    </div>
+
+    <div class="bg-white p-5 rounded shadow text-center">
+      <h2 class="text-lg font-semibold">Rejected</h2>
+      <p id="rejectedCount" class="text-3xl font-bold mt-2">0</p>
+    </div>
+
+  </div>
+
+  <!-- Available Jobs Section -->
+  <div class="max-w-6xl mx-auto mt-10 px-4">
+
+    <div class="flex justify-between items-center">
+      <div><h2 class="text-2xl font-bold">Available Jobs</h2></div>
+     <div class="flex gap-[3px]"> <p id="tabCount" class="font-semibold">8</p> <h4>Jobs</h4></div>
+    </div>
+
+    <!-- Tabs --> 
+    <div class="flex gap-4 mt-4">
+      <button id="allTab" class="px-4 py-2 bg-blue-600  text-white rounded">All</button>
+      <button id="interviewTab" class="px-4 py-2 bg-gray-300 rounded">Interview</button>
+      <button id="rejectedTab" class="px-4 py-2 bg-gray-300 rounded">Rejected</button>
+    </div>
+
+    <!-- No Job Message -->
+    <div id="emptyMessage" class="hidden text-center mt-10">
+      <img src="https://cdn-icons-png.flaticon.com/512/7486/7486740.png" class="w-24 mx-auto mb-4">
+      <h3 class="text-xl font-semibold">No Jobs Available</h3>
+      <p class="text-gray-500">There are no jobs in this category right now.</p>
+    </div>
+
+    <!-- Job Cards -->
+    <div id="jobContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+
+      <!-- 8 Cards -->
+
+      <!-- Card 1 -->
+      <div class="bg-white p-5 rounded shadow" data-id="1">
+        <h3 class="text-lg font-bold">TechNova Ltd</h3>
+        <p class="font-semibold">Frontend Developer</p>
+        <p>Dhaka, Bangladesh</p>
+        <p>Full-Time</p>
+        <p>Salary: 40,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Looking for skilled frontend developer with React knowledge.</p>
+
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+      <!--  total 8 cards -->
+
+      <!-- Card 2 -->
+      <div class="bg-white p-5 rounded shadow" data-id="2">
+        <h3 class="text-lg font-bold">SoftEdge IT</h3>
+        <p class="font-semibold">Backend Developer</p>
+        <p>Chittagong, Bangladesh</p>
+        <p>Full-Time</p>
+        <p>Salary: 50,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Node.js developer needed for API development.</p>
+
+        <div class="flex gap-3 mt-4 relative">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn w-[32px] h-[32px] absolute top-[-185px] right-[-2px] bg-gray-100 rounded-full "><span class=""><i class="fa-regular fa-trash-can"></i></span></button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-5 rounded shadow" data-id="3">
+        <h3 class="text-lg font-bold">CodeCraft</h3>
+        <p class="font-semibold">UI Designer</p>
+        <p>Remote</p>
+        <p>Contract</p>
+        <p>Salary: 30,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Creative UI designer required for mobile app project.</p>
+
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+       
+
+      <!-- Card 4 -->
+      <div class="bg-white p-5 rounded shadow" data-id="4">
+        <h3 class="text-lg font-bold">DigitalCore</h3>
+        <p class="font-semibold">QA Engineer</p>
+        <p>Dhaka</p>
+        <p>Full-Time</p>
+        <p>Salary: 35,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Software testing and bug tracking experience required.</p>
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white p-5 rounded shadow" data-id="5">
+        <h3 class="text-lg font-bold">NextGen IT</h3>
+        <p class="font-semibold">MERN Developer</p>
+        <p>Dhaka</p>
+        <p>Full-Time</p>
+        <p>Salary: 60,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Experience with MongoDB and Express required.</p>
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white p-5 rounded shadow" data-id="6">
+        <h3 class="text-lg font-bold">SkyTech</h3>
+        <p class="font-semibold">Flutter Developer</p>
+        <p>Remote</p>
+        <p>Part-Time</p>
+        <p>Salary: 25,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Build cross platform mobile apps.</p>
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="bg-white p-5 rounded shadow" data-id="7">
+        <h3 class="text-lg font-bold">BrightSoft</h3>
+        <p class="font-semibold">WordPress Developer</p>
+        <p>Feni</p>
+        <p>Full-Time</p>
+        <p>Salary: 28,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Custom theme development experience required.</p>
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="bg-white p-5 rounded shadow" data-id="8">
+        <h3 class="text-lg font-bold">DevSolutions</h3>
+        <p class="font-semibold">Junior Developer</p>
+        <p>Dhaka</p>
+        <p>Internship</p>
+        <p>Salary: 15,000 BDT</p>
+        <p class="mt-2 text-sm text-gray-600">Freshers are encouraged to apply.</p>
+        <div class="flex gap-3 mt-4">
+          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
+          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
+          <button class="deleteBtn bg-gray-700 text-white px-3 py-1 rounded">Delete</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script src="index.js"></script>
+</body>
+</html>
