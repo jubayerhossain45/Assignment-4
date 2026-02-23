@@ -1,11 +1,11 @@
- var totalCount = document.getElementById("totalCount");
+ var totalCount = document.getElementById("totalCount") ;
 var interviewCount = document.getElementById("interviewCount");
 var rejectedCount = document.getElementById("rejectedCount");
 var tabCount = document.getElementById("tabCount");
 
 var allTab = document.getElementById("allTab");
 var interviewTab = document.getElementById("interviewTab");
-var rejectedTab = document.getElementById("rejectedTab");
+var rejectedTab = document.getElementById("rejectedTab") ;
 
 var jobContainer = document.getElementById("jobContainer");
 var emptyMessage = document.getElementById("emptyMessage");
@@ -16,11 +16,11 @@ var rejected = 0;
 
 function updateDashboard() {
   interviewCount.innerText = interview;
-  rejectedCount.innerText = rejected;
+  rejectedCount.innerText = rejected ;
 }
 
 function showAll() {
-  var cards = jobContainer.children;
+  var cards = jobContainer.children ;
   var visible = 0;
 
   for (var i = 0; i < cards.length; i++) {
@@ -29,7 +29,7 @@ function showAll() {
   }
 
   tabCount.innerText = visible + " of 8 ";
-  emptyMessage.classList.add("hidden");
+  emptyMessage.classList.add("hidden") ;
 }
 
 function filterStatus(status) {
@@ -45,7 +45,7 @@ function filterStatus(status) {
     }
   }
 
-  tabCount.innerText = visible + " of 8 ";
+  tabCount.innerText = visible + " of 8 " ;
 
   if (visible === 0) {
     emptyMessage.classList.remove("hidden");
@@ -117,6 +117,6 @@ jobContainer.addEventListener("click", function (e) {
     totalCount.innerText = jobContainer.children.length;
     tabCount.innerText = jobContainer.children.length , visible + "";
     updateDashboard();
-  }
+  }  
 
 });
