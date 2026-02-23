@@ -25,7 +25,7 @@
 <body class=" font-[Geist]">
 
   <!-- Navbar -->
-  <div class="bg-blue-600 text-blue-950  p-4 text-2xl font-bold bg-gray-100 ">
+  <div class=" text-blue-950 py-4 px-5 text-3xl font-bold bg-gray-100 ">
     JOB APPLICATION TRACKER
   </div>
 
@@ -34,17 +34,17 @@
 
     <div class="bg-white p-5 rounded shadow text-center">
       <h2 class="text-lg font-semibold">Total Jobs</h2>
-      <p id="totalCount" class="text-3xl font-bold mt-2">8</p>
+      <p id="totalCount" class="text-3xl text-blue-900 font-bold mt-2">8</p>
     </div>
 
     <div class="bg-white p-5 rounded shadow text-center">
       <h2 class="text-lg font-semibold">Interview</h2>
-      <p id="interviewCount" class="text-3xl font-bold mt-2">0</p>
+      <p id="interviewCount" class="text-3xl font-bold mt-2 text-green-400">0</p>
     </div>
 
     <div class="bg-white p-5 rounded shadow text-center">
       <h2 class="text-lg font-semibold">Rejected</h2>
-      <p id="rejectedCount" class="text-3xl font-bold mt-2">0</p>
+      <p id="rejectedCount" class="text-3xl font-bold mt-2 text-red-400">0</p>
     </div>
 
   </div>
@@ -54,21 +54,21 @@
 
     <div class="flex justify-between items-center">
       <div><h2 class="text-2xl font-bold">Available Jobs</h2></div>
-     <div class="flex gap-[3px]"> <p id="tabCount" class="font-semibold">8</p> <h4>Jobs</h4></div>
+     <div class="flex gap-[3px]"> <p id="tabCount" class="font-semibold text-gray-500">8</p> <h4 class="text-bold text-gray-500 ">Jobs</h4></div>
     </div>
 
     <!-- Tabs --> 
     <div class="flex gap-4 mt-4">
-      <button id="allTab" class="px-4 py-2 bg-blue-600 active:bg-gray-300  text-white rounded">All</button>
-      <button id="interviewTab" class="px-4 py-2 bg-gray-300 active:bg-green-500 rounded">Interview</button>
-      <button id="rejectedTab" class="px-4 py-2 bg-gray-300 active:bg-red-500 rounded">Rejected</button>
+      <button id="allTab" class="px-4 py-2 bg-blue-600 w-[100px] active:bg-gray-300  text-white rounded">All</button>
+      <button id="interviewTab" class="px-4 py-2 text-gray-800 bg-gray-100 active:bg-green-500 rounded">Interview</button>
+      <button id="rejectedTab" class="px-4 py-2 text-gray-800 bg-gray-100 active:bg-red-500 rounded">Rejected</button>
     </div>
 
     <!-- No Job Message -->
     <div id="emptyMessage" class="hidden text-center mt-10">
       <img src="https://cdn-icons-png.flaticon.com/512/7486/7486740.png" class="w-24 mx-auto mb-4">
-      <h3 class="text-xl font-semibold">No Jobs Available</h3>
-      <p class="text-gray-500">There are no jobs in this category right now.</p>
+      <h3 class="text-xl font-semibold text-blue-900">No Jobs Available</h3>
+      <p class="text-gray-500">Check back soon for new job opportunities</p>
     </div>
 
     <!-- Job Cards -->
@@ -78,7 +78,7 @@
 
       <!-- Card 1 -->
       <div class="bg-white p-5 rounded shadow" data-id="1">
-        <h3 class="text-lg font-bold">TechNova Ltd</h3>
+      <h3 class="text-lg font-bold">TechNova Ltd</h3>
         <p class="font-semibold">Frontend Developer</p>
         <p>Dhaka, Bangladesh</p>
         <p>Full-Time</p>
@@ -87,9 +87,9 @@
         <p class="mt-2 text-sm text-gray-600">Looking for skilled frontend developer with React knowledge.</p>
 
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
              <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -108,9 +108,9 @@
         <p class="mt-2 text-sm text-gray-600">Node.js developer needed for API development.</p>
 
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-          <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+          <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
            <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -127,9 +127,9 @@
         <p class="mt-2 text-sm text-gray-600">Creative UI designer required for mobile app project.</p>
 
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
            <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -147,9 +147,9 @@
         <button class="btn">NOT APPLIED</button>
         <p class="mt-2 text-sm text-gray-600">Software testing and bug tracking experience required.</p>
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
             <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -165,9 +165,9 @@
         <button class="btn">NOT APPLIED</button>
         <p class="mt-2 text-sm text-gray-600">Experience with MongoDB and Express required.</p>
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
             <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -183,9 +183,9 @@
         <button class="btn">NOT APPLIED</button>
         <p class="mt-2 text-sm text-gray-600">Build cross platform mobile apps.</p>
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
            <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -201,9 +201,9 @@
         <button class="btn">NOT APPLIED</button>
         <p class="mt-2 text-sm text-gray-600">Custom theme development experience required.</p>
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
             <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>
@@ -219,9 +219,9 @@
         <button class="btn">NOT APPLIED</button>
         <p class="mt-2 text-sm text-gray-600">Freshers are encouraged to apply.</p>
         <div class="flex gap-3 mt-4 relative">
-          <button class="interviewBtn bg-green-500 text-white px-3 py-1 rounded">Interview</button>
-          <button class="rejectBtn bg-red-500 text-white px-3 py-1 rounded">Rejected</button>
-            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-185px] right-[-2px] bg-gray-400 rounded-full ">
+          <button class="interviewBtn bg-gray-60 text-green-700 border-[3px] text-bold border-green-700 px-3 py-1 rounded active:bg-green-700 active:text-gray-100">Interview</button>
+          <button class="rejectBtn  bg-gray-60 text-red-700 border-[3px] text-bold border-red-700 px-3 py-1 rounded active:bg-red-700 active:text-gray-100">Rejected</button>
+            <button class="deleteBtn cursor-pointer w-[42px] h-[42px] absolute top-[-220px] right-[-2px] bg-gray-100 rounded-full ">
             <div class="pointer-events-none"><i class="fa-regular fa-trash-can"></i></div>
           </button>
         </div>

@@ -13,6 +13,7 @@ var emptyMessage = document.getElementById("emptyMessage");
 var interview = 0;
 var rejected = 0;
 
+
 function updateDashboard() {
   interviewCount.innerText = interview;
   rejectedCount.innerText = rejected;
@@ -27,7 +28,7 @@ function showAll() {
     visible++;
   }
 
-  tabCount.innerText = visible + " Jobs";
+  tabCount.innerText = visible + " of 8 ";
   emptyMessage.classList.add("hidden");
 }
 
@@ -44,7 +45,7 @@ function filterStatus(status) {
     }
   }
 
-  tabCount.innerText = visible + " Jobs";
+  tabCount.innerText = visible + " of 8 ";
 
   if (visible === 0) {
     emptyMessage.classList.remove("hidden");
@@ -114,7 +115,7 @@ jobContainer.addEventListener("click", function (e) {
     card3.remove();
 
     totalCount.innerText = jobContainer.children.length;
-    tabCount.innerText = jobContainer.children.length , visible + " Jobs";
+    tabCount.innerText = jobContainer.children.length , visible + "";
     updateDashboard();
   }
 
