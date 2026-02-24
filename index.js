@@ -9,7 +9,6 @@ var rejectedTab= document.getElementById("rejectedTab") ;
 
 var jobContainer = document.getElementById("jobContainer");
 var emptyMessage = document.getElementById("emptyMessage");
-
 var interview = 0;
 var rejected = 0;
 
@@ -17,6 +16,7 @@ var rejected = 0;
 function updateDashboard() {
   interviewCount.innerText = interview;
   rejectedCount.innerText = rejected ;
+ 
 }
 
 function showAll() {
