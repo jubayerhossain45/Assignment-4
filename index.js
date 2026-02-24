@@ -5,7 +5,7 @@ var tabCount = document.getElementById("tabCount");
 
 var allTab = document.getElementById("allTab");
 var interviewTab = document.getElementById("interviewTab");
-var rejectedTab = document.getElementById("rejectedTab") ;
+var rejectedTab= document.getElementById("rejectedTab") ;
 
 var jobContainer = document.getElementById("jobContainer");
 var emptyMessage = document.getElementById("emptyMessage");
