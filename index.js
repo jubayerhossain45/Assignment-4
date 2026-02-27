@@ -1,16 +1,16 @@
- var totalCount = document.getElementById("totalCount") ;
-var interviewCount = document.getElementById("interviewCount");
-var rejectedCount = document.getElementById("rejectedCount");
-var tabCount = document.getElementById("tabCount");
+let totalCount = document.getElementById("totalCount") ;
+let interviewCount = document.getElementById("interviewCount");
+let rejectedCount = document.getElementById("rejectedCount");
+let tabCount = document.getElementById("tabCount");
 
-var allTab = document.getElementById("allTab");
-var interviewTab = document.getElementById("interviewTab");
-var rejectedTab= document.getElementById("rejectedTab") ;
+let allTab = document.getElementById("allTab");
+let interviewTab = document.getElementById("interviewTab");
+let rejectedTab= document.getElementById("rejectedTab") ;
 
-var jobContainer = document.getElementById("jobContainer");
-var emptyMessage = document.getElementById("emptyMessage");
-var interview = 0;
-var rejected = 0;
+let jobContainer = document.getElementById("jobContainer");
+let emptyMessage = document.getElementById("emptyMessage");
+let interview = 0;
+let rejected = 0;
 
 
 function updateDashboard() {
@@ -20,10 +20,10 @@ function updateDashboard() {
 }
 
 function showAll() {
-  var cards = jobContainer.children ;
-  var visible = 0;
+  let cards = jobContainer.children ;
+  let visible = 0;
 
-  for (var i = 0; i < cards.length; i++) {
+  for (let i = 0; i < cards.length; i++) {
     cards[i].style.display = "block";
     visible++;
   }
@@ -33,10 +33,10 @@ function showAll() {
 }
 
 function filterStatus(status) {
-  var cards = jobContainer.children;
-  var visible = 0;
+  let cards = jobContainer.children;
+  let visible = 0;
 
-  for (var i = 0; i < cards.length; i++) {
+  for (let i = 0; i < cards.length; i++) {
     if (cards[i].getAttribute("data-status") === status) {
       cards[i].style.display = "block";
       visible++;
@@ -69,8 +69,8 @@ rejectedTab.addEventListener("click", function () {
 jobContainer.addEventListener("click", function (e) {
 
   if (e.target.classList.contains("interviewBtn")) {
-    var card = e.target.closest("div[data-id]");
-    var currentStatus = card.getAttribute("data-status");
+    let card = e.target.closest("div[data-id]");
+    let currentStatus = card.getAttribute("data-status");
 
     if (currentStatus === "Rejected") {
       rejected--;
@@ -85,8 +85,8 @@ jobContainer.addEventListener("click", function (e) {
   }
 
   if (e.target.classList.contains("rejectBtn")) {
-    var card2 = e.target.closest("div[data-id]");
-    var currentStatus2 = card2.getAttribute("data-status");
+    let card2 = e.target.closest("div[data-id]");
+    let currentStatus2 = card2.getAttribute("data-status");
 
     if (currentStatus2 === "Interview") {
       interview--;
@@ -99,10 +99,10 @@ jobContainer.addEventListener("click", function (e) {
 
     updateDashboard();
   }
-
+  
   if (e.target.classList.contains("deleteBtn")) {
-    var card3 = e.target.closest("div[data-id]");
-    var status = card3.getAttribute("data-status");
+    let card3 = e.target.closest("div[data-id]");
+    let status = card3.getAttribute("data-status");
 
     if (status === "Interview") {
       interview;
